@@ -36,3 +36,20 @@ window.onscroll = function() {
   }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+  var video1 = document.getElementById('video1');
+  var video2 = document.getElementById('video2');
+
+  video1.onended = function() {
+      video1.style.display = 'none';
+      video2.style.display = 'block';
+      video2.play();
+  };
+
+  video2.onended = function() {
+      video2.style.display = 'none';
+      video1.style.display = 'block';
+      video1.play();
+  };
+});
+
