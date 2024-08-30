@@ -26,3 +26,13 @@ navLinks.forEach(function (link) {
     toggleButton.classList.add('bi-list');
   });
 });
+
+window.onscroll = function() {
+  var header = document.getElementById("header");
+  if (window.scrollY > 100) {
+    header.style.background = "rgba(0, 0, 0, 1)";
+  } else {
+    header.style.background = "rgba(0, 0, 0, 0)";
+  }
+};
+
