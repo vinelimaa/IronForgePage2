@@ -37,19 +37,29 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  var video1 = document.getElementById('video1');
-  var video2 = document.getElementById('video2');
+  var videos = [
+    document.getElementById('video1'),
+    document.getElementById('video2'),
+    document.getElementById('video3'),
+    document.getElementById('video4'),
+    document.getElementById('video5'),
+    document.getElementById('video6'),
+    document.getElementById('video7')
+  ];
 
-  video1.onended = function() {
-      video1.style.display = 'none';
-      video2.style.display = 'block';
-      video2.play();
-  };
+  function playNextVideo(index) {
+    var currentVideo = videos[index];
+    var nextIndex = (index + 1) % videos.length;
+    var nextVideo = videos[nextIndex];
 
-  video2.onended = function() {
-      video2.style.display = 'none';
-      video1.style.display = 'block';
-      video1.play();
-  };
+    currentVideo.onended = function() {
+      currentVideo.style.display = 'none';
+      nextVideo.style.display = 'block';
+      nextVideo.play();
+      playNextVideo(nextIndex);
+    };
+  }
+
+  playNextVideo(0);
 });
 
