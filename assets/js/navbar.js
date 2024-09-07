@@ -40,11 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var videos = [
     document.getElementById('video1'),
     document.getElementById('video2'),
-    document.getElementById('video3'),
-    document.getElementById('video4'),
-    document.getElementById('video5'),
-    document.getElementById('video6'),
-    document.getElementById('video7')
+    document.getElementById('video3')
   ];
 
   function playNextVideo(index) {
