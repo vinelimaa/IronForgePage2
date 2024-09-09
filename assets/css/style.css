@@ -446,7 +446,7 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients {
-  padding: 0;
+  padding: 5px 5px;
   text-align: center;
   background-color: #ddd;
 }
