@@ -448,7 +448,7 @@ section {
 .clients {
   padding: 0;
   text-align: center;
-  background-color: transparent;
+  background-color: #ddd;
 }
 
 .clients img {
@@ -540,16 +540,16 @@ section {
 --------------------------------------------------------------*/
 #pricing {
   background: linear-gradient(324deg, #000000, #435460, #000000, #5a6d7a);
-
 }
 
 .pricing .box {
+  position: relative; /* Cria um contexto de posicionamento para o botão */
   padding: 80px;
+  min-height: 480px; /* Altura mínima garantida */
   background: linear-gradient(135deg, #2f2f2f, #000000);
   text-align: center;
   border-radius: 15px;
   border: 1px solid rgb(240, 240, 240, 0.4);
-  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -561,7 +561,6 @@ section {
 
 .pricing .box h3 {
   font-weight: 400;
-  padding: 15px;
   margin-top: 15px;
   font-size: 18px;
   font-weight: 600;
@@ -574,19 +573,25 @@ section {
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
+  display: inline-flex; /* Alinha itens horizontalmente */
+  align-items: baseline; /* Alinha o texto na linha base */
+  white-space: nowrap; /* Impede quebra de linha */
 }
 
 .pricing .box h4 sup {
   font-size: 20px;
-  top: -15px;
-  left: -3px;
+  line-height: 1; /* Ajusta a altura da linha para melhor alinhamento */
+  margin-right: 5px; /* Espaço entre o símbolo e o texto */
 }
 
 .pricing .box h4 span {
-  color: #bababa;
   font-size: 16px;
   font-weight: 300;
+  color: #bababa;
+  margin-left: 5px; /* Espaço à esquerda do texto */
 }
+
+
 
 .pricing .box ul {
   padding: 0;
@@ -613,7 +618,11 @@ section {
 }
 
 .pricing .box .btn-wrap {
-  padding: 15px;
+  position: absolute; /* Posiciona o botão dentro da caixa */
+  bottom: 50px; /* Espaçamento do fundo da caixa */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  width: calc(100% - 40px); /* Ajusta a largura considerando o padding */
   text-align: center;
 }
 
@@ -658,6 +667,7 @@ section {
   border-color: #fff;
   color: #e0332c;
 }
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
