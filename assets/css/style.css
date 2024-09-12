@@ -448,7 +448,7 @@ section {
 .clients {
   padding: 5px 5px;
   text-align: center;
-  background-color: #ddd;
+  background-color: transparent;
 }
 
 .clients img {
@@ -474,72 +474,91 @@ section {
 # Services
 --------------------------------------------------------------*/
 #services {
-  background: #111111;
+  background: transparent;
+  padding: 60px 0;
 }
 
 .services .icon-box {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
+  background: #111111;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.services .icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
+.services .icon-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.services .icon-box img {
+  max-width: 200px;
+  height: auto;
   margin-bottom: 20px;
-  background: #fff;
-  border-radius: 50%;
-  transition: 0.5s;
-  color: #e0332c;
-  overflow: hidden;
-  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
-}
-
-.services .icon i {
-  font-size: 36px;
-  line-height: 0;
 }
 
 .services .title {
-  font-weight: 600;
-  margin-bottom: 15px;
-  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 22px;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  color: #333333;
 }
 
 .services .title a {
-  color: #ddd;
-  transition: 0.3s;
+  text-transform: uppercase;
+  color: #e0332c;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .services .title a:hover {
-  color: #e0332c;
+  color: #333333;
 }
 
 .services .title::after {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
-  height: 2px;
+  width: 60px;
+  height: 3px;
   background: #e0332c;
   bottom: 0;
-  left: calc(50% - 25px);
+  left: calc(50% - 30px);
 }
 
 .services .description {
-  line-height: 24px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #555555;
+}
+
+.services .read-more {
+  margin-top: 20px;
+  text-transform: uppercase;
   font-size: 14px;
+  font-weight: 600;
+  color: #e0332c;
+  text-decoration: none;
+  border: 2px solid #e0332c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.services .read-more:hover {
+  background-color: #e0332c;
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
 #pricing {
-  background: linear-gradient(324deg, #000000, #435460, #000000, #5a6d7a);
+  background: rgba(0, 0, 0, 1);
 }
 
 .pricing .box {

@@ -23,6 +23,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap"
     rel="stylesheet">
 
+  <!-- Include AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -95,7 +98,7 @@
           <source src="assets/videos/v.mp4" type="video/mp4">
         </video>
 
-        
+
 
       </div>
     </div>
@@ -163,35 +166,36 @@
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+     <!-- ======= Services Section ======= -->
+    <section id="services" class="services" data-aos="fade-up" data-aos-duration="1000">
       <div class="container">
+          <div class="section-title">
+              <h2 data-aos="fade-right">Nossos Serviços</h2>
+              <p data-aos="fade-left" data-aos-delay="200">Explore o que temos a oferecer para você.</p>
+          </div>
 
-        <div class="section-title">
-          <h2>Serviços</h2>
-          <p>Confira nossos serviços.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box">
-            <div class="icon"><i class="bi bi-person"></i></div>
-            <h4 class="title"><a href="">Atletas</a></h4>
-            <p class="description">Programas especializados para o desenvolvimento físico e mental de atletas.</p>
+          <div class="row">
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <img src="assets/img/1.jpg" alt="Atletas">
+                  <h4 class="title"><a href="#">Atletas</a></h4>
+                  <p class="description">Programas especializados para o desenvolvimento físico e mental de atletas.</p>
+                  <a href="#" class="read-more">Saiba Mais</a>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <img src="assets/img/2.jpg" alt="Treino Personalizado">
+                  <h4 class="title"><a href="#">Treino Personalizado</a></h4>
+                  <p class="description">Planos de treino sob medida para atender as necessidades individuais de cada aluno.</p>
+                  <a href="#" class="read-more">Saiba Mais</a>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                  <img src="assets/img/3.jpg" alt="Emagrecimento e Bem-estar">
+                  <h4 class="title"><a href="#">Emagrecimento e Bem-estar</a></h4>
+                  <p class="description">Orientações e planos focados em perda de peso e promoção do bem-estar geral.</p>
+                  <a href="#" class="read-more">Saiba Mais</a>
+              </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
-            <div class="icon"><i class="bi bi-person-lines-fill"></i></div>
-            <h4 class="title"><a href="">Treino Personalizado</a></h4>
-            <p class="description">Planos de treino sob medida para atender as necessidades individuais de cada aluno.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box">
-            <div class="icon"><i class="bi bi-heart"></i></div>
-            <h4 class="title"><a href="">Emagrecimento e Bem-estar</a></h4>
-            <p class="description">Orientações e planos focados em perda de peso e promoção do bem-estar geral.</p>
-          </div>
-        </div>
       </div>
-    </section><!-- End Services Section -->
+  </section><!-- End Services Section -->
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
@@ -413,6 +417,12 @@
   <!-- Scripts Específicos -->
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/faq.js"></script>
+
+  <!-- Include AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
